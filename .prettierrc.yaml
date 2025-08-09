@@ -1,2 +1,4 @@
 semi: false
+vueIndentScriptAndStyle: true
+
 plugins: [prettier-plugin-sh]

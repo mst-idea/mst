@@ -7,8 +7,9 @@
   // Format on save (require recommended extensions).
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": { "source.organizeImports": "always" },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
 
   // Code spell checker (require recommended extensions).
   "cSpell.ignorePaths": [".git", "node_modules", "pnpm-lock.yaml"],
-  "cSpell.words": ["esbenp", "oxlint"]
+  "cSpell.words": ["esbenp", "esbuild", "nuxt", "oxlint"]
 }

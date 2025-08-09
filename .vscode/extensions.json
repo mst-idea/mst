@@ -1,6 +1,7 @@
 {
   "recommendations": [
     // Languages and frameworks.
+    "vue.volar",
     "redhat.vscode-yaml",
 
     // Code qualities.
