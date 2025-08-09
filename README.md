@@ -6,3 +6,6 @@ The author came up with this idea and would like to share it with the world,
 so the article is here open-sourced in this repository.
 
 WIP.
+
+[中文](./article/mst-idea.zh.md) |
+[English](./article/mst-idea.en.md)
