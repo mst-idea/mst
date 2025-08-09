@@ -1,0 +1,11 @@
+{
+  "recommendations": [
+    // Languages and frameworks.
+    "redhat.vscode-yaml",
+
+    // Code qualities.
+    "esbenp.prettier-vscode",
+    "oxc.oxc-vscode",
+    "streetsidesoftware.code-spell-checker"
+  ]
+}

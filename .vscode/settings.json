@@ -1,0 +1,14 @@
+{
+  "files.encoding": "utf8",
+  "files.eol": "\n",
+  "editor.tabSize": 2,
+  "editor.rulers": [80],
+
+  // Format on save (require recommended extensions).
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": { "source.organizeImports": "always" },
+
+  // Code spell checker (require recommended extensions).
+  "cSpell.ignorePaths": [".git", "node_modules", "pnpm-lock.yaml"],
+  "cSpell.words": ["esbenp", "oxlint"]
+}

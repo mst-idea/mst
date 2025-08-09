@@ -1,0 +1,15 @@
+{
+  "name": "mst-idea",
+  "description": "The website to display the articles about MST, the idea.",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "format": "prettier --write .",
+    "review": "prettier --check . && oxlint"
+  },
+  "devDependencies": {
+    "oxlint": "^1.11.1",
+    "prettier": "^3.6.2",
+    "prettier-plugin-sh": "^0.18.0"
+  }
+}
