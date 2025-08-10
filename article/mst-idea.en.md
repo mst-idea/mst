@@ -90,4 +90,12 @@ A stable and fixed plan can provide a better sense of security and control, but 
 
 To ensure a better readability of dynamic responses, sufficient visualization implementation is also required in this regard. The relationships between task nodes of the Specification Tree should be displayed in a way that has higher information entropy and is more ergonomic. This aspect is key to the software implementation about MST. If this is not done well, the negative impact on user experience will greatly hinder the realization of related assumptions.
 
+## 7. Generate Specifications
+
+As mentioned before, the application of MST relies heavily on the Specification Library itself. Even that soft applications are merely a kind of platform or shell, and **the specification content is the core**. Moreover, the specification content may even be natural language, which means organizing the design philosophy itself into text. This also achieves an effect similar to so-called zero-code development.
+
+However, the specification text itself does not necessarily have to be written by humans. It is easy to imagine that LLMs can be used to automatically generate specifications based on user prompts. But even the generated specifications still need to comply with specific format and content requirements, that is, there must still be some "**Specifications to specify Specifications**". Furthermore, in specific implementations, it is often impossible to have only one specification document, instead, there will be a specification library composed of many optional specifications. Therefore, the project of writing and maintaining the specification library can also be regarded as a task requirement and entrusted to such MST application systems, thereby achieving the so-called "bootstrapping".
+
+If such a process can be popularized, then future scientific research will become like this: humans only produce key inspirations and deal with problems beyond the scope of existing knowledge systems. Once prompt a few key sentences of inspiration, the corresponding software system will analyze, generate the test specifications, and call the corresponding test equipment to verify. After completing the feasibility verification, it will compile specifications, update the knowledge system, and then reuse existing specifications to realize similar needs when they arise again. This cycle continues.
+
 WIP...
