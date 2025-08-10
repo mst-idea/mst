@@ -16,6 +16,25 @@
   },
 
   // Code spell checker (require recommended extensions).
-  "cSpell.ignorePaths": [".git", "node_modules", "pnpm-lock.yaml", "LICENSE"],
-  "cSpell.words": ["esbenp", "esbuild", "nuxt", "oxlint"]
+  "cSpell.ignorePaths": [
+    ".git",
+    ".data",
+    ".nuxt",
+    "node_modules",
+    "pnpm-lock.yaml",
+    "LICENSE"
+  ],
+  "cSpell.words": [
+    "aprosail",
+    "esbenp",
+    "esbuild",
+    "friedenthal",
+    "hsue",
+    "jiao",
+    "murtaugh",
+    "nuxt",
+    "oxlint",
+    "shen",
+    "tsien"
+  ]
 }
