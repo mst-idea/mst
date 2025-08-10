@@ -1,5 +1,6 @@
 ---
-cite:
+author: James Aprosail
+cites:
   - "Murtaugh, Charles K. 1967. 'Specification Trees - A Tool for Management.' SAE International. https://doi.org/10.4271/670640."
   - "Beck, Kent, et al. 2001. 'Manifesto for Agile Software Development.' https://agilemanifesto.org/."
   - "Hsue-Shen Tsien. *On Systems Engineering*. Shanghai Jiao Tong University Press, 2007."
@@ -56,5 +57,11 @@ This structure resembles Function Call and Model Context Protocol (MCP) but uses
 Such standardized structure encompassing title, abstract, and content originally stems from the academic paper format that has been in use for over a century. Papers written in this structure have existed across various carriers, from handwritten manuscripts and printed versions to computer softwares. And they had been indexed and utilized extensively in diverse environments from libraries, to database software, and then internet search engines. The vast volume of academic papers carried by this structure has driven technological progress across multiple eras over the past hundred years, which sufficiently demonstrates its maturity. Adopting such a data structure recording specification in the further implementation of the Model Specification Tree (MST) aligns with traditional practices and facilitates compatibility with, as well as reuse of, the accumulated achievements from previous human development.
 
 ## 3. Tree-structured Decomposition
+
+Nowadays, LLMs (and even the human themselves) are better at completing specific and clear tasks. The more accurate the description of the prompt, the higher the accuracy of its completion. Conversely, when facing highly abstract and vague task requirement descriptions, having to provide output quickly without sufficient information prompts, then both LLMs and humans will be error-pron. Therefore, it is necessary to **decompose** complex tasks into simpler ones.
+
+After hierarchical and recursive decomposition, each task node will have zero or multiple subtask nodes (usually not a single one), which forms a tree-structure called a **Specification Tree**. The ultimate effect of such decomposition is that the most detailed tasks can be completed in a single session, with only `done` or `fail` as the result. That is, the tasks that serve as the leaf nodes of the specification tree are indivisible (atomic), and can also be called **Atomic Tasks** or **Final Tasks**.
+
+Task decomposition may enter a dead loop, meaning it may decompose endlessly (meaninglessly) and never be implemented into specific final tasks. Such situations need to be guarded. For example, the maximum allowable depth of decomposition can be set programmatically according to corresponding situation, that once exceeding such depth, external intervention (such as from humans) can be requested. In standardized prompts, it is also necessary to guide LLMs on when decomposition is possible, and if decomposition is not possible, you must request intervention.
 
 WIP...
