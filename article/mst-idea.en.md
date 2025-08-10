@@ -82,4 +82,12 @@ The ultimate goal of LLMs' output is often to directly or indirectly influence t
 
 Testing may often fail, but this does not mean manual intervention are required immediately. For example, when testing programs, we can directly submit the error report to the LLMs for analysis and then it can provide modifications. However, according to design philosophy mentioned above, even subsequent attempts after a test failure need to be guided by specifications. If there are no matching specifications to guide the situation after a test failure, it is regarded as a failure and intervention should be requested. That this cycle of testing processes may fall into an infinite loop. We may set a threshold to guard the number of attempts. But the reason for the infinite loop is most likely a problem with the content of the specifications themselves, which may need to be improved.
 
+## 6. Dynamic Planning
+
+The generating process of a Specification Tree is not a one-time process: the design philosophy of MST also does not expect a fully implemented plan from the very beginning. Moreover, concerning methodologies such as Agile Development, it is easy to realize that completing the planning at the very beginning is impossible. That is to say, the Specification Tree will be dynamic and will have its original structure supplemented (or even modified) based on practical feedback during the execution process.
+
+A stable and fixed plan can provide a better sense of security and control, but it is more likely to result in unfulfilled requirements. That a flexible plan is more adaptable to changes in circumstances (or even the requirements themselves) but will also increase the mental burden on people. Therefore, flexibility and stability are mutually exclusive: a balance needs to be found between them. Want the both, the one might achieve neither. The specific point of balance still needs to be analyzed based on specific issues, and there can be no clear answer in the assumptions of this article.
+
+To ensure a better readability of dynamic responses, sufficient visualization implementation is also required in this regard. The relationships between task nodes of the Specification Tree should be displayed in a way that has higher information entropy and is more ergonomic. This aspect is key to the software implementation about MST. If this is not done well, the negative impact on user experience will greatly hinder the realization of related assumptions.
+
 WIP...
