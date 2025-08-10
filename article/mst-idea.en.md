@@ -72,4 +72,14 @@ The simplest (and most straightforward) engineering approach is to explicitly co
 
 The core idea of MST never aims to allow software systems driven by LLMs (the AIs) to completely replace human works. Instead, it expects humans to be freed from simple, repetitive, and unnecessary labor (especially the mental effort of overthinking and hesitating in such tasks) and to focus their energy on creative and inspirational jobs. If a certain task cannot be completed even with all specification libraries in the world (i.e., all knowledge systems -- a topic on information barriers and knowledge monopoly will be discussed later -- this indicates that such a demand has exceeded the boundaries of current human knowledge systems, which requires further research.
 
+## 5. Practice and Testing
+
+The ultimate goal of LLMs' output is often to directly or indirectly influence the real world. Therefore, the judgment of its success or failure needs to be tested by practice in reality. Of course, to avoid further problems in actual usages, such practical testing needs to be advanced to the development stage, this is the **testing**. Such testing may occur at the physical level or the information level, and even in a vague logical description level. For example:
+
+1. For mechanical products, they can be tested in the lab and judged whether they meet the requirements according to sensor parameters.
+2. For computer programs, there are methods such as unit tests.
+3. For imaginative works (such as fictions), verification can be conducted through literal logical reasoning and analysis.
+
+Testing may often fail, but this does not mean manual intervention are required immediately. For example, when testing programs, we can directly submit the error report to the LLMs for analysis and then it can provide modifications. However, according to design philosophy mentioned above, even subsequent attempts after a test failure need to be guided by specifications. If there are no matching specifications to guide the situation after a test failure, it is regarded as a failure and intervention should be requested. That this cycle of testing processes may fall into an infinite loop. We may set a threshold to guard the number of attempts. But the reason for the infinite loop is most likely a problem with the content of the specifications themselves, which may need to be improved.
+
 WIP...
