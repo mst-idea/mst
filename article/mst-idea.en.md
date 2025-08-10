@@ -13,7 +13,7 @@ cites:
 
 # Model Specification Tree, the Idea
 
-The idea of Model Specification Tree (MST) combines Large Language Models (LLMs) with Specification Trees—using LLMs' ability to understand descriptions and generate outputs to automate steps in such systems engineering management methodology. This may reduce manual work in LLMs' workflow cycles and improves output quality.
+The idea of Model Specification Tree (MST) combines Large Language Models (LLMs) with Specification Trees -- using LLMs' ability of understanding descriptions and generating outputs, to automate steps in such systems engineering management methodology. This may reduce manual work in LLMs' workflow cycles and improves output quality.
 
 ## 0. Preface
 
