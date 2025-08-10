@@ -1,3 +1,17 @@
+---
+author: 廿一日船
+
+cite:
+  - "钱学森. 论系统工程[M]. 上海交通大学出版社, 2007."
+  - "Murtaugh, Charles K. Specification Trees - A Tool for Management[J]. SAE International, 1967. https://doi.org/10.4271/670640"
+  - "Beck, Kent, et al. Manifesto for Agile Software Development[EB/OL]. 2001. https://agilemanifesto.org/"
+  - "Friedenthal, Sanford, Alan Moore, and Rick Steiner. Practical Guide to SysML: The Systems Modeling Language[M]. Amsterdam: Academic Press, 2008."
+  - "OpenAI. Function Call API[EB/OL]. 2023. https://platform.openai.com/docs/guides/function-calling"
+  - "Anthropic. Introducing the Model Context Protocol[EB/OL]. 2024. https://www.anthropic.com/news/model-context-protocol"
+  - "OpenAI. Introducing the Model Spec[EB/OL]. 2025. https://openai.com/index/introducing-the-model-spec/"
+  - "Grove, Sean. The New Code[C]. The AI Engineer World's Fair, 2025. https://www.youtube.com/watch?v=8rABwKRsec4"
+---
+
 # 模型规划树(MST)之灵感
 
 **模型规划树** (MST, Model Specification Tree) 的灵感源于大语言**模型** (Model) + **规划树** (Specification Tree)，即：利用大语言模型理解描述并输出各类产物的功能，实现规划树这种系统工程管理方法中尽可能多的中间步骤，以尽可能减少大模型工作过程中不必要的重复人工操作，并实现更高质量的输出。
