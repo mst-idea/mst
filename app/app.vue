@@ -12,7 +12,6 @@
   body {
     margin: 0;
     height: 100vh;
-    overflow: hidden;
     user-select: none;
 
     background-color: var(--background-color);

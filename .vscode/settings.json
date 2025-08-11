@@ -37,6 +37,7 @@
     "nuxtjs",
     "oxlint",
     "shen",
+    "titlebar",
     "tsien"
   ]
 }

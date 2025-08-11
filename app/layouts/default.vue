@@ -3,8 +3,8 @@
 </script>
 
 <template>
-  <TitleBarContainer :titlebarHeight="headerHeight">
-    <template #header> </template>
+  <ScrollableTitlebar :titlebarHeight="headerHeight">
+    <template #titlebar></template>
     <template #content><slot /> </template>
-  </TitleBarContainer>
+  </ScrollableTitlebar>
 </template>
