@@ -17,5 +17,5 @@
 
   // Code spell checker (require recommended extensions).
   "cSpell.ignorePaths": [".git", "node_modules", "pnpm-lock.yaml", "LICENSE"],
-  "cSpell.words": ["esbenp", "esbuild", "nuxt", "oxlint"]
+  "cSpell.words": ["esbenp", "esbuild", "nuxt", "nuxtjs", "oxlint"]
 }
