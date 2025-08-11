@@ -15,6 +15,12 @@
     "readme.md": "license, license-*"
   },
 
+  // Optimize display for generated files.
+  "editor.wordWrapColumn": 80,
+  "[javascript]": { "editor.wordWrap": "wordWrapColumn" },
+  "[html]": { "editor.wordWrap": "wordWrapColumn" },
+  "[css]": { "editor.wordWrap": "wordWrapColumn" },
+
   // Code spell checker (require recommended extensions).
   "cSpell.ignorePaths": [
     ".git",
