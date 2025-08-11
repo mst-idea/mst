@@ -1,0 +1,13 @@
+body {
+  --foreground-color: #232323;
+  --background-color: #fefdfa;
+  --title-bar-color: #fefdfa;
+  --border-color: #e1e1e1;
+}
+
+body.dark {
+  --foreground-color: #fefdfa;
+  --background-color: #232323;
+  --title-bar-color: #232323;
+  --border-color: #444444;
+}
