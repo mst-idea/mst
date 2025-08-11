@@ -7,7 +7,9 @@ Desktop.ini
 
 # Node.
 node_modules
+dist
 
 # Nuxt.
 .data
 .nuxt
+.output
