@@ -1,6 +1,6 @@
 <script setup lang="ts">
   const route = useRoute().fullPath
-  const { data: content } = useAsyncData("", () => {
+  const { data: content } = useAsyncData("", async () => {
     return queryCollection("content").path(route).first()
   })
 </script>
@@ -8,7 +8,7 @@
 <template>
   <main>
     <ContentRenderer v-if="content" :value="content" />
-    <div v-else>no content</div>
+    <div v-else>loading content or no content</div>
   </main>
 </template>
 
