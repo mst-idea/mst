@@ -10,7 +10,7 @@ jobs:
       - run: npm run review
       - run: npm run generate
       - uses: actions/upload-pages-artifact@v3
-        with: { path: dist }
+        with: { path: dist, artifact_name: website }
 
   deploy:
     needs: build
@@ -23,3 +23,4 @@ jobs:
     steps:
       - uses: actions/deploy-pages@v4
         id: deployment
+        with: { artifact_name: website }
