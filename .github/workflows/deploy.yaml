@@ -1,5 +1,5 @@
 name: Deploy GitHub Pages
-on: { push: { branches: [feat/website-deploy] } }
+on: { push: { branches: [website] } }
 
 jobs:
   build:
