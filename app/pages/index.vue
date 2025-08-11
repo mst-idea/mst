@@ -8,7 +8,7 @@
 <template>
   <main>
     <ContentRenderer v-if="content" :value="content" />
-    <div v-else>no content</div>
+    <div v-else>loading content or no content</div>
   </main>
 </template>
 
