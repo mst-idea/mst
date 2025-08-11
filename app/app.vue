@@ -1,3 +1,7 @@
+<script lang="ts" setup>
+  import "@/theme.css"
+</script>
+
 <template>
   <NuxtLayout>
     <NuxtPage />
@@ -5,13 +9,6 @@
 </template>
 
 <style>
-  :root {
-    --foreground-color: #232323;
-    --background-color: #fefdfa;
-    --title-bar-color: #fefdfa;
-    --border-color: #e1e1e1;
-  }
-
   body {
     margin: 0;
     height: 100vh;
