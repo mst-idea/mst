@@ -1,3 +1,0 @@
-# locale zh
-
-locale zh
