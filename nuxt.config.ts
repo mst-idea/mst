@@ -1,8 +1,9 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  devtools: { enabled: true },
-  compatibilityDate: "2025-07-15",
   modules: ["@nuxt/content", "@nuxtjs/i18n"],
+  compatibilityDate: "2025-07-15",
+  devtools: { enabled: true },
+  nitro: { preset: "static" },
   i18n: {
     locales: [{ code: "en" }, { code: "zh" }],
     strategy: "prefix",
