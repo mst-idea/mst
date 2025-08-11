@@ -3,7 +3,6 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   compatibilityDate: "2025-07-15",
   modules: ["@nuxt/content", "@nuxtjs/i18n"],
-  app: { baseURL: "mst" },
   i18n: {
     locales: [{ code: "en" }, { code: "zh" }],
     strategy: "prefix",
