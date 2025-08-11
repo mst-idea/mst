@@ -1,5 +1,10 @@
 ---
+title: Model Specification Tree, the Idea
+abstract: The idea of Model Specification Tree (MST) combines Large Language Models (LLMs) with Specification Trees -- using LLMs' ability to understanding descriptions and generating outputs, to automate steps in such systems engineering management methodology. This may reduce manual work in LLMs' workflow cycles and improve output quality.
+
 author: James Aprosail
+date: 2025-08-11
+
 cites:
   - "Murtaugh, Charles K. 1967. 'Specification Trees - A Tool for Management.' SAE International. https://doi.org/10.4271/670640."
   - "Beck, Kent, et al. 2001. 'Manifesto for Agile Software Development.' https://agilemanifesto.org/."
@@ -10,10 +15,6 @@ cites:
   - "OpenAI. 2025. 'Introducing the Model Spec.' https://openai.com/index/introducing-the-model-spec/."
   - "Grove, Sean. 2025. 'The New Code.' Presented at The AI Engineer World's Fair. https://www.youtube.com/watch?v=8rABwKRsec4."
 ---
-
-# Model Specification Tree, the Idea
-
-The idea of Model Specification Tree (MST) combines Large Language Models (LLMs) with Specification Trees -- using LLMs' ability to understanding descriptions and generating outputs, to automate steps in such systems engineering management methodology. This may reduce manual work in LLMs' workflow cycles and improve output quality.
 
 ## 0. Preface
 
