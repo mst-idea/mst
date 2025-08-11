@@ -6,6 +6,17 @@
 </script>
 
 <template>
-  <ContentRenderer v-if="content" :value="content" />
-  <div v-else>no content</div>
+  <main>
+    <ContentRenderer v-if="content" :value="content" />
+    <div v-else>no content</div>
+  </main>
 </template>
+
+<style scoped>
+  main {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+</style>
