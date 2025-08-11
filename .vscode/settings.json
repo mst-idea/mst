@@ -12,7 +12,7 @@
   // File nesting patterns (enable as you need).
   "explorer.fileNesting.patterns": {
     "package.json": "pnpm-lock.yaml",
-    "readme.md": "license"
+    "readme.md": "license, license-*"
   },
 
   // Code spell checker (require recommended extensions).

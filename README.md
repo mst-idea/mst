@@ -9,3 +9,8 @@ WIP.
 
 [中文](./article/mst-idea.zh.md) |
 [English](./article/mst-idea.en.md)
+
+## Licenses
+
+- The articles are released under [Creative Common Zero](./LICENSE).
+- The code of website are released under [MIT License](./LICENSE-mit).
