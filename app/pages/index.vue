@@ -8,13 +8,17 @@
 <template>
   <main v-if="content">
     <h1>{{ content?.title }}</h1>
+
+    <div class="meta">
+      <p class="author">author: {{ content?.author?.name }}</p>
+      <p v-if="content?.translator" class="translator">
+        translator: {{ content?.translator }}
+      </p>
+
+      <p class="date">date: {{ content?.date }}</p>
+    </div>
+
     <p class="abstract">{{ content?.abstract }}</p>
-
-    <p class="author">author: {{ content?.author?.name }}</p>
-    <p v-if="content?.translator" class="translator">
-      translator: {{ content?.translator }}
-    </p>
-
     <ContentRenderer :value="content" />
 
     <footer>
@@ -33,5 +37,9 @@
     height: 100%;
     overflow-x: hidden;
     overflow-y: scroll;
+  }
+
+  h1 {
+    text-align: center;
   }
 </style>
