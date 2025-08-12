@@ -1,6 +1,5 @@
 <script setup lang="ts">
   import type { NuxtError } from "#app"
-  import "@/root.css"
 
   defineProps({
     error: Object as () => NuxtError,
