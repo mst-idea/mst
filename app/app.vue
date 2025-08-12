@@ -1,27 +1,22 @@
 <script lang="ts" setup>
-  import "@/theme.css"
+  const themeAnimationMs = ref(235)
+  const themeAnimationDuration = ref(`${themeAnimationMs}ms`)
 </script>
 
 <template>
-  <NuxtLayout>
-    <NuxtPage />
-  </NuxtLayout>
+  <AdaptiveTheme :animation-ms="themeAnimationMs">
+    <NuxtLayout>
+      <NuxtPage />
+    </NuxtLayout>
+  </AdaptiveTheme>
 </template>
 
 <style>
-  body {
-    margin: 0;
-    height: 100vh;
-    user-select: none;
-
+  div#__nuxt {
     background-color: var(--background-color);
     color: var(--foreground-color);
-    font-size: 16;
-    font-family: sans-serif;
-  }
-
-  div#__nuxt {
-    height: 100%;
-    width: 100%;
+    transition:
+      background-color ease-in-out v-bind(themeAnimationDuration),
+      color ease-in-out v-bind(themeAnimationDuration);
   }
 </style>
