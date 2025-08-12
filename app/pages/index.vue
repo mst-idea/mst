@@ -1,6 +1,6 @@
 <script setup lang="ts">
   const route = useRoute().fullPath
-  const { data: content } = useAsyncData("", () => {
+  const { data: content } = useAsyncData(`content-${route}`, () => {
     return queryCollection("content").path(route).first()
   })
 </script>
