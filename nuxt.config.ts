@@ -2,15 +2,18 @@ import type { LocaleObject } from "@nuxtjs/i18n"
 import { readdirSync, statSync } from "node:fs"
 import { join } from "node:path"
 
-function* allCssAssets(root: string): Generator<string> {
+function allFiles(root: string, filter: (name: string) => boolean): string[] {
+  // Generator to array may not be compatible in certain environment.
+  const handler: string[] = []
   for (const name of readdirSync(root)) {
     const path = join(root, name)
     if (statSync(path).isDirectory()) {
-      yield* allCssAssets(path)
-    } else if (path.endsWith(".css")) {
-      yield path
+      handler.push(...allFiles(path, filter))
+    } else if (filter(name)) {
+      handler.push(path)
     }
   }
+  return handler
 }
 
 function* allLocales(root: string): Generator<LocaleObject<string>> {
@@ -33,7 +36,7 @@ export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
   nitro: { preset: "static" },
-  css: allCssAssets(join(appDir, "styles")).toArray(),
+  css: allFiles(join(appDir, "styles"), (name) => name.endsWith(".css")),
   i18n: {
     defaultLocale: Intl.DateTimeFormat().resolvedOptions().locale,
     locales: allLocales(join(appDir, "locales")).toArray(),
