@@ -10,3 +10,7 @@ div#__nuxt {
   font-family: sans-serif;
   font-size: 16;
 }
+
+a {
+  color: inherit;
+}

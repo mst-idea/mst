@@ -1,7 +1,4 @@
 <script lang="ts" setup>
-  import "@/root.css"
-  import "@/theme.css"
-
   const themeAnimationMs = ref(235)
   const themeAnimationDuration = ref(`${themeAnimationMs}ms`)
 </script>
