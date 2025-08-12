@@ -9,7 +9,7 @@ export default defineNuxtModule<AllCssOptions>({
   meta: { name: "all-css", configKey: "allCss" },
   defaults: { cssDir: "assets/css" },
 
-  async setup(options, nuxt) {
+  setup(options, nuxt) {
     const resolver = createResolver(import.meta.dirname)
     const appDir = resolver.resolve(nuxt.options.srcDir, nuxt.options.dir.app)
     const cssDir = resolver.resolve(appDir, options.cssDir)

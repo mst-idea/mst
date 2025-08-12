@@ -13,3 +13,6 @@ dist
 .data
 .nuxt
 .output
+
+# Locales gen.
+app/utils/locale.d.ts

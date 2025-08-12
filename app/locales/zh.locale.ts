@@ -1,8 +1,0 @@
-export default {
-  name: "中文",
-  author: "作者",
-  translator: "译者",
-  createTime: "发布时间",
-  lastUpdate: "最近更新",
-  cites: "参考资料",
-} satisfies LocaleMessage
