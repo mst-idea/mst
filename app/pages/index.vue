@@ -7,24 +7,38 @@
 
 <template>
   <main v-if="content">
-    <h1>{{ content?.title }}</h1>
+    <article>
+      <h1>{{ content?.title }}</h1>
 
-    <div class="meta">
-      <p class="author">author: {{ content?.author?.name }}</p>
-      <p v-if="content?.translator" class="translator">
-        translator: {{ content?.translator }}
-      </p>
+      <div class="meta">
+        <p class="peoples">
+          <People
+            :role="$t('author')"
+            :name="content?.author?.name"
+            :link="content?.author?.link"
+          />
 
-      <p class="date">date: {{ content?.date }}</p>
-    </div>
+          <span v-if="content?.translator">
+            <span> | </span>
+            <People
+              :role="$t('translator')"
+              :name="content?.translator?.name"
+              :link="content?.translator?.link"
+            />
+          </span>
+        </p>
 
-    <p class="abstract">{{ content?.abstract }}</p>
-    <ContentRenderer :value="content" />
+        <p class="date">{{ $t("createTime") }}: {{ content?.createTime }}</p>
+      </div>
 
-    <footer>
-      <p class="cite-title">cite title</p>
-      <p class="cite" v-for="cite in content?.cites">{{ cite }}</p>
-    </footer>
+      <p class="abstract">{{ content?.abstract }}</p>
+      <ContentRenderer :value="content" />
+
+      <footer>
+        <p class="cite-title">{{ $t("cites") }}</p>
+        <li class="cite" v-for="cite in content?.cites">{{ cite }}</li>
+      </footer>
+    </article>
   </main>
 
   <main v-else>loading content or no content</main>
@@ -37,9 +51,26 @@
     height: 100%;
     overflow-x: hidden;
     overflow-y: scroll;
+
+    display: flex;
+    justify-content: center;
+  }
+
+  article {
+    max-width: 40rem;
+    text-align: justify;
+  }
+
+  footer {
+    text-align: start;
   }
 
   h1 {
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  div.meta {
     text-align: center;
   }
 </style>

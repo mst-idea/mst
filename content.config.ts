@@ -3,6 +3,7 @@ import { defineCollection, defineContentConfig, z } from "@nuxt/content"
 const person = z.object({
   name: z.string(),
   link: z.string(),
+  avatar: z.string(),
 })
 
 const frontmatter = z.object({
@@ -10,7 +11,8 @@ const frontmatter = z.object({
   abstract: z.string(),
   author: person,
   translator: person,
-  date: z.string(),
+  createTime: z.string(),
+  lastUpdate: z.string(),
   cites: z.array(z.string()),
 })
 

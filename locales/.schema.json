@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "$schema": { "type": "string" },
+    "#name": { "type": "string" },
+    "author": { "type": "string" },
+    "translator": { "type": "string" },
+    "createTime": { "type": "string" },
+    "lastUpdate": { "type": "string" },
+    "cites": { "type": "string" }
+  }
+}
