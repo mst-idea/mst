@@ -2,6 +2,7 @@ export default {
   name: "English",
   author: "Author",
   translator: "Translator",
-  date: "Date",
+  createTime: "Create time",
+  lastUpdate: "Last update",
   cites: "Cites",
 } satisfies LocaleMessage

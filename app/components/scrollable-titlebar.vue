@@ -21,6 +21,8 @@
     border: solid 1px var(--border-color);
     background-color: rgba(var(--title-bar-color), 32%);
     backdrop-filter: blur(16px);
+
+    z-index: 1;
   }
 
   article {

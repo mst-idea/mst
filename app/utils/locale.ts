@@ -2,6 +2,7 @@ export interface LocaleMessage {
   name?: string
   author?: string
   translator?: string
-  date?: string
+  createTime?: string
+  lastUpdate?: string
   cites?: string
 }

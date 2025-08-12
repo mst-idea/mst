@@ -10,7 +10,8 @@ const frontmatter = z.object({
   abstract: z.string(),
   author: person,
   translator: person,
-  date: z.string(),
+  createTime: z.string(),
+  lastUpdate: z.string(),
   cites: z.array(z.string()),
 })
 
