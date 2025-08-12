@@ -1,7 +1,10 @@
 <script setup lang="ts">
   import type { NuxtError } from "#app"
 
-  listenTheme(document.body, "dark")
+  onMounted(() => {
+    listenTheme(document.body)
+  })
+
   defineProps({
     error: Object as () => NuxtError,
   })

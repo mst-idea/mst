@@ -1,7 +1,16 @@
-export function listenTheme(element: HTMLElement, className: string) {
+export function listenTheme(
+  element: HTMLElement,
+  classNames?: { light?: string; dark?: string },
+) {
   const platformDarkMedia = "(prefers-color-scheme: dark)"
-  element.classList.toggle(className, matchMedia(platformDarkMedia).matches)
+  const lightName = classNames?.light ?? "light"
+  const darkName = classNames?.dark ?? "dark"
+  const toggle = (dark: boolean) => {
+    element.classList.toggle(lightName, !dark)
+    element.classList.toggle(darkName, dark)
+  }
+  toggle(matchMedia(platformDarkMedia).matches)
   matchMedia(platformDarkMedia).addEventListener("change", (e) => {
-    element.classList.toggle(className, e.matches)
+    toggle(e.matches)
   })
 }

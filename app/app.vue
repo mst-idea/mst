@@ -1,7 +1,9 @@
 <script lang="ts" setup>
   import "@/theme.css"
 
-  listenTheme(document.body, "dark")
+  onMounted(() => {
+    listenTheme(document.body)
+  })
 </script>
 
 <template>
