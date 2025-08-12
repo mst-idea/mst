@@ -12,7 +12,6 @@ const frontmatter = z.object({
   author: person,
   translator: person,
   createTime: z.string(),
-  lastUpdate: z.string(),
   cites: z.array(z.string()),
 })
 

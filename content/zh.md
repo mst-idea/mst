@@ -8,7 +8,6 @@ author:
   avatar: github:aprosail
 
 createTime: "2025年08月11日"
-lastUpdate: "2025年08月12日"
 
 cites:
   - "钱学森. 论系统工程[M]. 上海交通大学出版社, 2007."

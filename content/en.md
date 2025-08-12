@@ -8,7 +8,6 @@ author:
   avatar: github:aprosail
 
 createTime: "Aug 11, 2025"
-lastUpdate: "Aug 12, 2025"
 
 cites:
   - "Murtaugh, Charles K. 1967. 'Specification Trees - A Tool for Management.' SAE International. https://doi.org/10.4271/670640."

@@ -17,15 +17,15 @@
             :name="content?.author?.name"
             :link="content?.author?.link"
           />
+        </p>
 
-          <span v-if="content?.translator">
-            <span> | </span>
-            <People
-              :role="$t('translator')"
-              :name="content?.translator?.name"
-              :link="content?.translator?.link"
-            />
-          </span>
+        <p v-if="content?.translator">
+          <span> | </span>
+          <People
+            :role="$t('translator')"
+            :name="content?.translator?.name"
+            :link="content?.translator?.link"
+          />
         </p>
 
         <p class="date">{{ $t("createTime") }}: {{ content?.createTime }}</p>
@@ -35,7 +35,7 @@
       <ContentRenderer :value="content" />
 
       <footer>
-        <p class="cite-title">{{ $t("cites") }}</p>
+        <p class="cite-title">{{ $t("cites") }}:</p>
         <li class="cite" v-for="cite in content?.cites">{{ cite }}</li>
       </footer>
     </article>
