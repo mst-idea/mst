@@ -1,7 +1,7 @@
 <script lang="ts" setup>
   import "@/theme.css"
 
-  listenTheme()
+  listenTheme(document.body, "dark")
 </script>
 
 <template>
