@@ -10,10 +10,18 @@
     <h1>{{ content?.title }}</h1>
 
     <div class="meta">
-      <p class="author">author: {{ content?.author?.name }}</p>
-      <p v-if="content?.translator" class="translator">
-        translator: {{ content?.translator }}
-      </p>
+      <People
+        :role="$t('author')"
+        :name="content?.author?.name"
+        :link="content?.author?.link"
+      />
+
+      <People
+        v-if="content?.translator"
+        :role="$t('translator')"
+        :name="content?.translator?.name"
+        :link="content?.translator?.link"
+      />
 
       <p class="date">date: {{ content?.date }}</p>
     </div>

@@ -1,14 +1,7 @@
+import type { LocaleObject } from "@nuxtjs/i18n"
 import { readdirSync, statSync } from "node:fs"
 import { join } from "node:path"
 
-/**
- * Read all CSS files recursively inside the specified root folder.
- *
- * Attention that this function will not detect such folder's change,
- * that you need to restart the server manually once there's new css files.
- *
- * @param root The root folder to start reading from.
- */
 function* allCssAssets(root: string): Generator<string> {
   for (const name of readdirSync(root)) {
     const path = join(root, name)
@@ -20,18 +13,32 @@ function* allCssAssets(root: string): Generator<string> {
   }
 }
 
+function* allLocales(root: string): Generator<LocaleObject<string>> {
+  for (const name of readdirSync(root)) {
+    const path = join(root, name)
+    if (statSync(path).isDirectory()) {
+      yield* allLocales(path)
+    } else if (path.endsWith(".locale.ts")) {
+      yield { code: name.split(".")[0]!, file: path }
+    }
+  }
+}
+
 const root = import.meta.dirname
+const appDir = join(root, "app")
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   modules: ["@nuxt/content", "@nuxtjs/i18n"],
-  css: allCssAssets(join(root, "app", "assets", "css")).toArray(),
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
   nitro: { preset: "static" },
+  css: allCssAssets(join(appDir, "styles")).toArray(),
   i18n: {
-    locales: [{ code: "en" }, { code: "zh" }],
+    defaultLocale: Intl.DateTimeFormat().resolvedOptions().locale,
+    locales: allLocales(join(appDir, "locales")).toArray(),
     strategy: "prefix",
+    compilation: { strictMessage: true },
     detectBrowserLanguage: {
       useCookie: true,
       cookieKey: "nuxt_locale",
