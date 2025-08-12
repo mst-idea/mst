@@ -7,7 +7,7 @@ export default defineNuxtConfig({
   allCss: { cssDir: "styles" },
   i18n: {
     defaultLocale: Intl.DateTimeFormat().resolvedOptions().locale,
-    locales: [],
+    langDir: "locales",
     strategy: "prefix",
     compilation: { strictMessage: true },
     detectBrowserLanguage: {
