@@ -3,6 +3,7 @@ import { defineCollection, defineContentConfig, z } from "@nuxt/content"
 const person = z.object({
   name: z.string(),
   link: z.string(),
+  avatar: z.string(),
 })
 
 const frontmatter = z.object({

@@ -35,14 +35,13 @@ export default defineNuxtModule<LocaleDeclareOptions>({
   meta: { name: "locale-declare", configKey: "localeDeclare" },
   defaults: {
     schema: "locales/.schema.json",
-    declareOutput: "utils/locale.d.ts",
+    declareOutput: "types/locale.d.ts",
   },
   setup(options, nuxt) {
     const resolver = createResolver(import.meta.dirname)
     const rootDir = resolver.resolve(nuxt.options.rootDir)
-    const appDir = resolver.resolve(rootDir, nuxt.options.dir.app)
     const from = resolver.resolve(rootDir, options.schema)
-    const to = resolver.resolve(appDir, options.declareOutput)
+    const to = resolver.resolve(rootDir, options.declareOutput)
 
     const langDir: string | undefined = ((raw: string | null | undefined) => {
       if (!raw) return undefined
