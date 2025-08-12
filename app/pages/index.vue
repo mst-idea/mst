@@ -57,7 +57,14 @@
   }
 
   article {
+    --padding-side: 5rem;
+    padding-left: var(--padding-side);
+    padding-right: var(--padding-side);
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+
     max-width: 40rem;
+    min-width: 200px;
     text-align: justify;
   }
 
